@@ -43,12 +43,13 @@ namespace DCC_3_GameBoard
             {
                 for (int column = 0; column < width; column++)
                 {
-                    Console.Write(" {0} ", arrayCount++);
+                    Console.Write(" {0} ", arrayCount);
                     if (column == width - 1)
                     {
                         break;
                     }
                     Console.Write("|");
+                    applyMove();
                 }
                 height--;
                 Console.WriteLine();
@@ -68,6 +69,11 @@ namespace DCC_3_GameBoard
                 }
             }
             while (height > 0);
+        }
+
+        public void applyMove()
+        {
+            arrayCount++;
         }
     }
 
